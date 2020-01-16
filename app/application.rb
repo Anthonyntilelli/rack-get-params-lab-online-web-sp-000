@@ -21,6 +21,7 @@ class Application
         @@cart.each { |item|  resp.write item.to_s + "\n" }
       end
     elsif req.path.match(/add/)
+      requested_item = req.params["item"]
       puts "TODO"
     else
       resp.write "Path Not Found"
