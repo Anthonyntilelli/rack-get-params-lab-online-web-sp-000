@@ -22,7 +22,7 @@ class Application
       end
     elsif req.path.match(/add/)
       requested_item = req.params["item"]
-      puts "TODO"
+      @@cart << requested_item
     else
       resp.write "Path Not Found"
     end
