@@ -20,6 +20,7 @@ class Application
       else
         @@cart.each { |item|  resp.write item.to_s + "\n" }
       end
+    elsif req.path.match(/cart/)
     else
       resp.write "Path Not Found"
     end
